@@ -18,7 +18,8 @@ class Formatter {
       else
       {
         return x
-      }).join(" ")
+      }
+    }).join(" ")
   }
 
 }
