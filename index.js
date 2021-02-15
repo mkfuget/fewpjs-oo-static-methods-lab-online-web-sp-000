@@ -10,8 +10,8 @@ class Formatter {
   }
   static titleize(input)
   {
-    return input.split(" ").map(function(x) {
-      if(!((x == "the") || (x == "a") || (x == "an") || (x == "but") ||  (x == "for") || (x == "at") || (x == "by") || (x == "from") || (x == "and")))
+    return Formatter.capitalize(input.split(" ").map(function(x) {
+      if(!((x == "the") || (x == "a") || (x == "an") || (x == "but") ||  (x == "for") || (x == "at") || (x == "by") || (x == "from") || (x == "and") || (x == "and")))
       {
         return Formatter.capitalize(x)
       }
@@ -19,7 +19,7 @@ class Formatter {
       {
         return x
       }
-    }).join(" ")
+    }).join(" "))
   }
 
 }
