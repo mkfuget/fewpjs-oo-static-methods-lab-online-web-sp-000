@@ -6,7 +6,7 @@ class Formatter {
   }
   static sanitize(input)
   {
-    return input.replace(/[\W|\s|-|\']/g, '')
+    return input.replace(/[\W|\s]/g, '')
   }
 
 }
