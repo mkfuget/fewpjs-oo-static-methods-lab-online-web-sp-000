@@ -8,5 +8,9 @@ class Formatter {
   {
     return input.replace(/[^a-zA-Z\s\'-]/g, '')
   }
+  static sanitize(input)
+  {
+    return input.replace(/[^a-zA-Z\s\'-]/g, '')
+  }
 
 }
