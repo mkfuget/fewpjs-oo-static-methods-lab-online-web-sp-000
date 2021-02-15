@@ -8,9 +8,17 @@ class Formatter {
   {
     return input.replace(/[^a-zA-Z\s\'-]/g, '')
   }
-  static sanitize(input)
+  static titleize(input)
   {
-    return input.replace(/[^a-zA-Z\s\'-]/g, '')
+    return input.split(" ").map(x => {
+      if(!(x == "the") || (x == "a") || (x == "an") || (x == "but") ||  (x == "for") || (x == "at") || (x == "by") || (x == "from") || (x == "and"))
+      {
+        return capitalize(x)
+      }
+      else
+      {
+        return x
+      }).join(" ")
   }
 
 }
