@@ -4,5 +4,10 @@ class Formatter {
   {
     return string[0].toUpperCase() + string.substring(1)
   }
+  static sanitize(input)
+  {
+    input.replace(/\W/g, '')
+
+  }
 
 }
